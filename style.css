@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #212427;
+    --black-opaque: #21242730;
+    --reddish: #ac3931;
+    --yellowish: #f4e409;
+    --light-grey: #7e7fa2;
+    --MAIN-TITLE-FONT-SIZE: clamp(2.5rem, 6vw + 1rem, 7rem);
+    --FORM-PADDING: min(3vh, 1rem);
+    --RIGHT-SIDE-PADDING: 0 5vw;
+    --shadow-color: 0deg 0% 55%;
+    --shadow-elevation-low:
+        0px 0.5px 0.7px hsl(var(--shadow-color) / 0.16),
+        0px 0.9px 1.2px -0.5px hsl(var(--shadow-color) / 0.32),
+        0px 1.9px 2.6px -1px hsl(var(--shadow-color) / 0.48);
+    --shadow-elevation-medium:
+        0px 0.5px 0.7px hsl(var(--shadow-color) / 0.17),
+        0px 2px 2.7px -0.3px hsl(var(--shadow-color) / 0.29),
+        0.1px 4.4px 5.9px -0.7px hsl(var(--shadow-color) / 0.42),
+        0.2px 9.7px 13.1px -1px hsl(var(--shadow-color) / 0.54);
+    --shadow-elevation-high:
+        0px 0.5px 0.7px hsl(var(--shadow-color) / 0.15),
+        0.1px 4.4px 5.9px -0.1px hsl(var(--shadow-color) / 0.21),
+        0.2px 7.9px 10.7px -0.3px hsl(var(--shadow-color) / 0.27),
+        0.2px 12px 16.2px -0.4px hsl(var(--shadow-color) / 0.33),
+        0.4px 17.6px 23.8px -0.6px hsl(var(--shadow-color) / 0.39),
+        0.5px 25.4px 34.3px -0.7px hsl(var(--shadow-color) / 0.44),
+        0.7px 36.5px 49.3px -0.9px hsl(var(--shadow-color) / 0.5),
+        1px 51.8px 69.9px -1px hsl(var(--shadow-color) / 0.56);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    line-height: 2.25rem;
+}
+/* The side header part */
+.side_header {
+    background-image: url("images/resized_tattoo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    position: relative;
+}
+
+.side_header > p {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 5%;
+    color: white;
+    font-size: clamp(0.7rem, 1.5vw, 1rem);
+    opacity: 0.8;
+}
+
+.artist_attribution {
+    text-decoration: none;
+    color: white;
+}
+
+.artist_attribution:visited {
+    color: white;
+}
+
+.artist_attribution:hover,
+.artist_attribution:focus {
+    color: var(--yellowish);
+}
+
+.logo_and_title {
+    display: flex;
+    align-items: center;
+    color: ivory;
+    width: 100%;
+    /* background-color: var(--black-opaque); */
+    position: relative;
+    top: -10vh;
+}
+
+.main_title {
+    font-size: var(--MAIN-TITLE-FONT-SIZE);
+}
+
+.odin_logo {
+    width: 30%;
+    height: auto;
+}
+
+/* Sign up form section*/
+
+.sign_up_form_section {
+    display: grid;
+    place-items: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.sign_up_form_container {
+    width: 100%;
+    /* padding: VAR(--RIGHT-SIDE-PADDING); */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sign_up_form_container > * {
+    padding: var(--RIGHT-SIDE-PADDING);
+}
+
+#sign_up_form {
+    padding: 0 0;
+}
+
+.sign_up_form_title {
+    padding-bottom: var(--FORM-PADDING);
+}
+
+.sign_up_form>fieldset {
+    border: none;
+    padding: 3.5rem 5vw 2rem 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:0.8rem;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.sign_up_legend {
+    font-weight: 900;
+    position: absolute;
+    top:5px;
+    left: 5vw;
+}
+
+.submit_button {
+    background-color: var(--reddish);
+    color: white;
+    width: clamp(10rem, 6vw + 2rem, 15rem);
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    font-weight: 900;
+    margin: 1rem 5vw 0 5vw;
+}
+
+.form_section {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    gap: 0.3rem;
+    line-height: 1rem;
+}
+
+.form_section>label {
+    font-weight: 600;
+}
+
+.form_section>input {
+    padding: 0.25rem;
+}
+
+.form_section>input:valid {
+    border: 2px solid green;
+}
+
+.form_section>input:invalid {
+    border: 2px solid var(--reddish);
+}
+
+.form_section>input:active {
+    border: 2px solid var(--yellowish);
+}
+
+.log_in_link {
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.log_in_link:link,
+.log_in_link:visited {
+    color: var(--reddish);
+}
+
+.log_in_link:hover,
+.log_in_link:focus {
+    color: var(--yellowish);
+}
+/* Media queries */
+
+@media (max-width: 720px) {
+    .logo_and_title {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main_title {
+        display: none;
+    }
+
+    .odin_logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .side_header>p {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    body {
+        grid-template-columns: none;
+    }
+
+    .side_header {
+        display: none;
+    }
+}
+
+@media (max-width: 430px) {
+    .sign_up_form>fieldset {
+        grid-template-columns: none;
+        gap: 0.2rem;
+    }
+
+    .title_one {
+        padding-top: 2rem;
+    }
+}

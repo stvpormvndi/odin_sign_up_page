@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!--Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+</head>
+<body>
+    <header class="side_header" id="side_header">
+        <div id="logo_and_title" class="logo_and_title">
+            <img src="images/white_dagger.png" height="150px" alt="A traditional dagger" id="odin_logo" class="odin_logo">
+            <h1 id="main_title" class="main_title">Tattoo</h1>
+        </div>
+        <p>Photo by <a class="artist_attribution sign_up_form_link" id="artist_attribution" target="_blank" href="https://unsplash.com/@seteph?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Allef Vinicius</a> on <a target="_blank" class="artist_attribution" href="https://unsplash.com/it/foto/hxNiXP498UI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    </header>
+    <main id="sign_up_form_section" class="sign_up_form_section">
+        <div class="sign_up_form_container">
+            <h2 id="sign_up_form_title_one" class="sign_up_form_title title_one">
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em class="emphasis">now</em> to get started.
+            </h2>
+            <h2 id="sign_up_form_title_two" class="sign_up_form_title title_two">
+                You <em class="emphasis">know</em> you want to! 
+            </h2>
+            <form action="#" method="post" class="sign_up_form" id="sign_up_form">
+                <fieldset>
+                    <legend class="sign_up_legend" id="sign_up_legend">Let's do this!</legend>
+                    <div class="form_section first_name_container">
+                        <label for="first_name">First name</label>
+                        <input type="text" name="first_name" id="first_name" placeholder="Thor" required>
+                    </div>
+                    <div class="last_name_container form_section">
+                        <label for="last_name">Last name</label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Odinson" required></input>
+                    </div>
+                    <div class="email_container form_section">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="thorodinson@valhalla.no" required></input>
+                    </div>
+                    <div class="phone_number_container form_section">
+                        <label for="phone_number">Phone number</label>
+                        <input type="tel" id="phone_number" name="phone_number"></input>
+                    </div>
+                    <div class="password_container form_section">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="first_password password" required>
+                    </div>
+                    <div class="confirm_password_container form_section">
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password" class="confirm_password password" required>
+                    </div>
+                </fieldset>
+                <button type="submit" class="submit_button" id="submit_button">Create Account</button>
+            </form>
+            <p class="already_have_an_account" id="already_have_an_account">Already have an account? <a href="#" class="log_in_link" id="log_in_link">Log In</a></p>
+        </div>
+    </main>
+</body>
+</html>
